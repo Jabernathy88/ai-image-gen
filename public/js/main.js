@@ -1,7 +1,8 @@
 function onSubmit(e) {
     e.preventDefault();
 
-    // other selectors
+    document.querySelector('.msg').textContent = ''
+    document.querySelector('#image').src = ''
 
     // collect user params to send to API
     const prompt = document.querySelector('#prompt').value 
@@ -35,7 +36,10 @@ function onSubmit(e) {
             }
 
             const data = await response.json()
-            console.log(data)
+            // console.log(data) // turn off, next push
+            const imageUrl = data.data
+
+            document.querySelector('#image').src = imageUrl
 
             removeSpinner()
 
@@ -45,11 +49,11 @@ function onSubmit(e) {
     }
 }
 
-function showSpinner {
+function showSpinner () {
     document.querySelector('.spinner').classList.add('show')
 }
 
-function removeSpinner {
+function removeSpinner () {
     document.querySelector('.spinner').classList.remove('show')
 }
 
