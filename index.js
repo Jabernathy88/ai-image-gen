@@ -4,9 +4,12 @@ const port = process.env.PORT || 5000
 
 const app = express()
 
-// Body parser middlewear
+// Body parser middleware
 app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: false })
+
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/openai', require('./routes/openaiRoutes'))
 

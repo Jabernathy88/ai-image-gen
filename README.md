@@ -11,3 +11,5 @@ Test prompts were:
 and
 
 `Frisbee Ninja, with red mask, blue frisbees, realistic`
+
+NEXT: 00:23:30
