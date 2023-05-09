@@ -1,7 +1,5 @@
 # OpenAI-based Image Generator app, Node.js
 
-
-
 Node-based Open AI app. Generates images from natural language.
 
 Full screenshot preview, on my local machine.
